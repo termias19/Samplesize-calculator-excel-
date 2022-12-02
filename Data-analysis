@@ -1,0 +1,12 @@
+
+#must be placed in the box of sample size calculator 
+
+# assuming that population size is B6 cell
+# assuming that confidence level is D6 cell
+# Margin of error is F6 cell
+
+
+
+=IFERROR(ROUNDUP((((VLOOKUP(D6,'ZScore Lookup'!A51:C102,3,FALSE))^2*0.5*(1-0.5))/(F6/100)^2)/(1+((VLOOKUP(D6,
+'ZScore Lookup'!A51:C102,3,FALSE))^2*0.5*(1-0.5))/((F6/100)^2*B6)), 0), "Error (Check Inputs)")
+
